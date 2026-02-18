@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Galerie Photos Unsplash
 
 Application web moderne de visualisation de photos avec authentification, intégration à l'API Unsplash, système de likes, et infinite scrolling optimisé.
@@ -301,3 +302,7 @@ visualisation-image/
 
 ---
 
+=======
+# galerie-photo-app
+Application web complète permettant aux utilisateurs de s’authentifier, de consulter des images issues d’une API externe et d’interagir avec celles-ci via un système de "likes".
+>>>>>>> f12f205be7b3a294fdbb3bca75c77096720c7f56
