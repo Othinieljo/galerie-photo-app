@@ -1,0 +1,22 @@
+/**
+ * Styles pour les décorations de la page de login.
+ * Seul le chat est conservé, l'image de fond est gérée dans login.module.css
+ */
+
+.decoChat {
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ds-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.decoChat svg {
+  color: var(--ds-text);
+}

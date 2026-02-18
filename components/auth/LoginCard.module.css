@@ -1,0 +1,225 @@
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--ds-card);
+  border-radius: var(--ds-radius-card);
+  padding: 40px 36px;
+  box-shadow: var(--ds-shadow-card);
+  border: 1px solid var(--ds-border-card);
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ds-text);
+  text-align: center;
+}
+
+.subheading {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--ds-text-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.fields {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fieldWrap {
+  position: relative;
+}
+
+.fieldWrap input {
+  width: 100%;
+  padding: 14px 48px 14px 16px;
+  border: 1.5px solid var(--ds-border);
+  border-radius: var(--ds-radius);
+  background: var(--ds-input-bg);
+  font-size: 14px;
+  color: var(--ds-text);
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.fieldWrap input:disabled {
+  opacity: 0.85;
+  cursor: not-allowed;
+}
+
+.fieldWrap input::placeholder {
+  color: var(--ds-text-muted);
+}
+
+.fieldWrap input:focus {
+  border-color: var(--ds-accent-focus);
+  box-shadow: 0 0 0 2px var(--ds-accent-focus-ring);
+}
+
+.fieldWrapInvalid input {
+  border-color: var(--ds-error);
+  background: var(--ds-error-bg);
+}
+
+.fieldWrapInvalid input:focus {
+  border-color: var(--ds-error);
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.15);
+}
+
+.fieldIcon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ds-text-muted);
+  display: flex;
+  align-items: center;
+}
+
+.showBtn {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--ds-text-muted);
+  cursor: pointer;
+  padding: 0;
+}
+
+.showBtn:hover {
+  color: var(--ds-text);
+}
+
+.trouble {
+  margin-top: 10px;
+  font-size: 13.5px;
+  color: var(--ds-text);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.trouble:hover {
+  text-decoration: underline;
+}
+
+.signinBtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: var(--ds-radius);
+  background: var(--ds-accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s ease, opacity 0.2s;
+}
+
+.signinBtn:hover {
+  background: var(--ds-accent-hover);
+}
+
+.signinBtn:active {
+  transform: scale(0.98);
+}
+
+.signinBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.divider {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: var(--ds-border);
+}
+
+.dividerText {
+  font-size: 13px;
+  color: var(--ds-text-muted);
+  white-space: nowrap;
+}
+
+.socialGrid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.socialBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 12px 8px;
+  border: 1.5px solid var(--ds-border);
+  border-radius: var(--ds-radius);
+  background: var(--ds-card);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--ds-text);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.socialBtn:hover {
+  background: var(--ds-hover);
+}
+
+.footerText {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--ds-text-muted);
+}
+
+.footerText a {
+  color: var(--ds-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footerText a:hover {
+  text-decoration: underline;
+}
+
+.errorMsg {
+  margin-top: 8px;
+  background: var(--ds-error-bg);
+  color: var(--ds-error);
+  border-radius: var(--ds-radius-sm);
+  padding: 10px 14px;
+  font-size: 13px;
+  border: 1px solid var(--ds-error-border);
+  transition: opacity 0.2s ease;
+}
+
+.successMsg {
+  margin-top: 8px;
+  background: var(--ds-success-bg);
+  color: var(--ds-success);
+  border-radius: var(--ds-radius-sm);
+  padding: 10px 14px;
+  font-size: 13px;
+  border: 1px solid var(--ds-success-border);
+}
