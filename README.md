@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 # Galerie Photos Unsplash
 
 Application web moderne de visualisation de photos avec authentification, intégration à l'API Unsplash, système de likes, et infinite scrolling optimisé.
 
-##  Table des matières
+## 📋 Table des matières
 
 - [Fonctionnalités](#-fonctionnalités)
 - [Technologies utilisées](#-technologies-utilisées)
@@ -13,10 +12,6 @@ Application web moderne de visualisation de photos avec authentification, intég
 - [Lancement](#-lancement)
 - [Architecture](#-architecture)
 - [Choix techniques](#-choix-techniques)
-- [Structure du projet](#-structure-du-projet)
-- [Gestion des erreurs](#-gestion-des-erreurs)
-- [Performance et optimisation](#-performance-et-optimisation)
-- [Authentification](#-authentification)
 
 ##  Fonctionnalités
 
@@ -47,7 +42,7 @@ Application web moderne de visualisation de photos avec authentification, intég
 - **Gestion d'erreurs** élégante avec retry automatique
 - **Optimisation LCP** pour les images au-dessus de la ligne de flottaison
 
-## 🛠 Technologies utilisées
+##  Technologies utilisées
 
 - **Framework** : Next.js 16.1.6 (App Router)
 - **Langage** : TypeScript 5
@@ -70,7 +65,7 @@ Application web moderne de visualisation de photos avec authentification, intég
 
 ```bash
 git clone <repository-url>
-cd visualisation-image
+cd galerie-photo-app
 ```
 
 ### 2. Installer les dépendances
@@ -110,9 +105,9 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 | Variable | Description | Requis |
 |----------|-------------|--------|
-| `UNSPLASH_ACCESS_KEY` | Clé d'accès API Unsplash | ✅ Oui |
-| `UNSPLASH_SECRET_KEY` | Clé secrète API Unsplash | ⚠️ Optionnel (non utilisé actuellement) |
-| `NEXT_PUBLIC_APP_URL` | URL de l'application (pour logout redirect) | ⚠️ Optionnel |
+| `UNSPLASH_ACCESS_KEY` | Clé d'accès API Unsplash |  Oui |
+| `UNSPLASH_SECRET_KEY` | Clé secrète API Unsplash |  Optionnel (non utilisé actuellement) |
+| `NEXT_PUBLIC_APP_URL` | URL de l'application (pour logout redirect) |  Optionnel |
 
 ### Configuration Next.js
 
@@ -196,7 +191,7 @@ visualisation-image/
 
 ```
 
-## 🎨 Choix techniques
+##  Choix techniques
 
 ### 1. Next.js App Router
 
@@ -268,18 +263,6 @@ visualisation-image/
 
 
 
-### API Unsplash
-
-- **Erreurs réseau** : Retry automatique avec backoff exponentiel (max 3 tentatives)
-- **Rate limiting** : Cache mémoire pour réduire les appels
-- **Réponses vides** : État "Aucune photo disponible" avec message
-- **Erreurs de parsing** : Fallback gracieux, logs console pour debug
-
-### Images
-
-- **Échec de chargement** : Fallback UI avec message "Image non disponible"
-- **LCP optimization** : `priority={true}` pour les 6 premières images
-- **Lazy loading** : Images hors viewport chargées à la demande
 
 
 
@@ -290,19 +273,3 @@ visualisation-image/
 
 
 
-
-
-
-
-##  Licence
-
-
-## 👤 Auteur
-
-
----
-
-=======
-# galerie-photo-app
-Application web complète permettant aux utilisateurs de s’authentifier, de consulter des images issues d’une API externe et d’interagir avec celles-ci via un système de "likes".
->>>>>>> f12f205be7b3a294fdbb3bca75c77096720c7f56

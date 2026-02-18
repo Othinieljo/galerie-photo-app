@@ -18,7 +18,7 @@ import { NextResponse } from "next/server";
 import { OrderBy } from "unsplash-js";
 import { unsplash } from "@/lib/unsplash";
 
-/** Cache mémoire pour réduire les appels API (rate limit Unsplash: 50/h en demo) */
+/** Cache mémoire qui réduit les appels API (rate limit Unsplash: 50/h en demo) */
 const listCache = new Map<string, { data: unknown; ts: number }>();
 const CACHE_TTL_MS = 60 * 1000; // 1 minute
 
@@ -73,15 +73,7 @@ export async function GET(req: Request) {
       orderBy,
     };
 
-    // Add color filter if not "all"
-    if (colorParam !== "all") {
-      queryParams.color = colorParam as any;
-    }
-
-    // Add orientation filter if not "all"
-    if (orientationParam !== "all") {
-      queryParams.orientation = orientationParam as any;
-    }
+    
 
     const result = await unsplash.photos.list(queryParams);
 
@@ -100,7 +92,7 @@ export async function GET(req: Request) {
       );
     }
 
-    // Unsplash API returns { results: UnsplashPhoto[], total: number, ... }
+    // L'API Unsplash retourne { results: UnsplashPhoto[], total: number, ... }
     const response = {
       results: result.response.results || [],
       total: result.response.total || 0,

@@ -1,11 +1,5 @@
 import Image from "next/image";
 
-/**
- * WomanIllustration Component
- * 
- * Affiche l'illustration de fond de la page de login.
- * Remplace l'ancien SVG par une image PNG optimisée avec Next.js Image.
- */
 export function WomanIllustration() {
   return (
     <Image

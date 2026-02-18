@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
 /**
- * Home: redirect to /gallery if logged in, else /login
+ * Home: redirige vers /gallery si connecté, sinon vers /login
  */
 export default async function HomePage() {
   const cookieStore = await cookies();

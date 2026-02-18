@@ -10,7 +10,7 @@ interface ImageGridProps {
 }
 
 export function ImageGrid({ photos, isLiked, onLikeToggle }: ImageGridProps) {
-  // First 6 images are above the fold and should be loaded eagerly for better LCP
+  // Les 6 premières images sont au-dessus du pli et sont chargées en priorité pour une meilleure LCP
   const ABOVE_THE_FOLD_COUNT = 6;
 
   return (

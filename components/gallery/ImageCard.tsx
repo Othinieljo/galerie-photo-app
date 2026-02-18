@@ -6,8 +6,8 @@
  * Carte d'affichage d'une photo Unsplash avec :
  * - Image optimisée avec Next.js Image (lazy loading, responsive)
  * - Overlay de détails au survol (auteur, description, stats)
- * - Bouton like/unlike avec animation
- * - Gestion d'erreur de chargement d'image avec fallback UI
+ * - Bouton like/unlike 
+ * - Gestion d'erreur de chargement d'image
  * - Animation d'entrée avec délai progressif pour effet cascade
  * 
  * @param photo - Données de la photo Unsplash
@@ -50,7 +50,6 @@ export function ImageCard({ photo, isLiked, onLikeToggle, index, priority = fals
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Image optimisée avec Next.js Image (WebP, responsive, lazy loading) */}
       {imageUrl && !imageError ? (
         <Image
           src={imageUrl}
@@ -66,7 +65,7 @@ export function ImageCard({ photo, isLiked, onLikeToggle, index, priority = fals
           }}
         />
       ) : (
-        // Fallback UI en cas d'erreur de chargement
+        // UI de secours en cas d'erreur de chargement
         <div className="flex h-full w-full items-center justify-center bg-[var(--ds-border)] text-[var(--ds-text-muted)]">
           <span className="text-sm">Image non disponible</span>
         </div>

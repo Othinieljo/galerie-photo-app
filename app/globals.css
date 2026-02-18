@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ==========================================================================
-   Design system — basé sur la page Login (cohérence globale)
+   Design system qui est basé sur la page Login 
    ========================================================================== */
 
 :root {
@@ -71,7 +71,7 @@ body {
 }
 
 /* ==========================================================================
-   Curseur personnalisé — design moderne et élégant
+   Curseur personnalisé 
    ========================================================================== */
 
 /* Curseur par défaut — point subtil */

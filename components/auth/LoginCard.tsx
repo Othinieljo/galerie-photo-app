@@ -8,7 +8,7 @@
  * - muser1/mpassword1 → Succès
  * - muser2/mpassword2 → Succès
  * - muser3/mpassword3 → Compte bloqué
- * - Autres → Identifiants invalides
+ * - autres → Identifiants invalides
  * 
  * @component
  */
@@ -41,8 +41,7 @@ export function LoginCard() {
    * Gère la soumission du formulaire de connexion
    * - Valide les champs (marque comme "touched")
    * - Appelle l'API d'authentification
-   * - Gère les états de succès/erreur avec transitions
-   * - Redirige vers /gallery après succès (délai 600ms pour UX)
+   * - Redirige vers /gallery après succès 
    */
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

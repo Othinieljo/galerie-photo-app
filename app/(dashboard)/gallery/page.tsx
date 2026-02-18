@@ -35,10 +35,10 @@ export default function GalleryPage() {
     orientation: "all",
   });
 
-  // Hook personnalisé pour le chargement infini des photos avec gestion d'erreurs
+  // Hook personnalisé qui gère le chargement infini des photos avec gestion d'erreurs
   const { photos, loading, refreshing, error, hasMore, sentinelRef, retry } = useInfinitePhotos(filters);
   
-  // Hook pour gérer les likes (lecture et toggle)
+  // Hook qui gère les likes (lecture et toggle)
   const { isLiked, toggleLike } = useLikes();
 
   return (
@@ -53,14 +53,14 @@ export default function GalleryPage() {
       <main className="mx-auto w-full max-w-6xl px-3 py-4 sm:px-4 sm:py-6">
         <PhotoFilters onFiltersChange={setFilters} />
 
-        {/* Error state with retry */}
+        {/* État d'erreur avec retry */}
         {error && (
           <div className="mb-4 sm:mb-6">
             <ErrorState message={error} onRetry={retry} isRetrying={loading} />
           </div>
         )}
 
-        {/* Initial loading state */}
+        {/* État de chargement initial */}
         {photos.length === 0 && !error && refreshing && (
           <div className="flex flex-col items-center justify-center gap-3 py-12 sm:gap-4 sm:py-16">
             <Spinner className="text-[var(--ds-accent)]" />
@@ -71,7 +71,7 @@ export default function GalleryPage() {
           </div>
         )}
 
-        {/* Empty state */}
+        {/* État vide */}
         {photos.length === 0 && !error && !refreshing && !loading && (
           <div className="flex flex-col items-center justify-center gap-3 py-16 text-center">
             <svg
@@ -94,7 +94,7 @@ export default function GalleryPage() {
           </div>
         )}
 
-        {/* Photo grid with infinite scroll */}
+        {/* Grille de photos avec infinite scroll */}
         {photos.length > 0 && (
           <InfiniteScroll
             sentinelRef={sentinelRef}
